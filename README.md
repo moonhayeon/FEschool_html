@@ -1,3 +1,3 @@
-#FrontendSchool_1
+# FrontendSchool_1
 
 - https://github.com/moonhayeon/FEschool_html
