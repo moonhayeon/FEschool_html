@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radius</title>
+    <style>
+        div {
+            position: absolute;
+            left: 300px;
+            top: 300px;
+            width: 150px;
+            height: 700px;
+            background: #fcbd6b;
+            
+        }
+     
+        .pepero_choco {
+            height: 450px;
+            background: #924b30;
+            border: 10px solid black;
+            border-top-left-radius:  45%;
+            border-top-right-radius: 45%;
+            transform: rotate(-20deg);
+        }
+        .pepero {
+            left: 345px;
+            border: 10px solid black;
+            border-top-left-radius:  45%;
+            border-top-right-radius: 45%;
+            border-bottom-left-radius:  45%;
+            border-bottom-right-radius: 45%;
+            transform: rotate(-20deg);
+        }
+        .lt_eye {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            left: 30px;
+            top: 180px;
+            background: black;
+            border-radius:200%;
+        }
+        .rt_eye {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            left: 90px;
+            top: 160px;
+            background: black;
+            border-radius: 50%;
+        }        
+        .l_cheek {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            left: -30px;
+            top: 190px;
+            background: #f59691;
+            border-radius: 50%;
+            transform: rotate(-5deg);
+        }
+        .r_cheek {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            left: 120px;
+            top: 160px;
+            background: #f59691;
+            border-radius: 50%;
+            transform: rotate(-5deg);            
+        }
+        .nose {
+            
+            position: relative;
+            height: 10px;
+            width: 7px;
+            left: 70px;
+            top: 110px;
+            background: black;
+            border-radius: 70px;
+            transform: rotate(-10deg);
+        }
+        .mouse {
+            position: relative;
+            width: 40px;
+            height: 50px;
+            left: 48px;
+            top: 120px;
+            background: #d04433;
+            border: 7px solid black;
+            border-radius: 0% 0% 150% 150%            
+        }        
+    </style>
+</head>
+<body>
+    <div class="pepero"></div>
+    <div class="pepero_choco">
+        <div class="lt_eye"></div>
+        <div class="rt_eye"></div>
+        <div class="l_cheek"></div>
+        <div class="r_cheek"></div>
+        <div class="nose"></div>
+        <div class="mouse"></div>       
+    </div>            
+</body>
+</html>
