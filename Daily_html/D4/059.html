@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>transform</title>
+    <title>tranform</title>
     <style>
-        div {
+        .one {
             border: darkgoldenrod solid 5px;
             border-radius: 30px;
             background: chocolate;
@@ -17,18 +17,35 @@
             line-height: 80px;
             color:white;
             font-size: 28px;
-            transition: all 1s; 
+            transition: all 1s;
         }
         .one:hover {
             background: teal;
             transform: rotate(90deg) scale(2);
         }
-        
+        .two {
+            border: darkgoldenrod solid 5px;
+            border-radius: 30px;
+            background: chocolate;
+            height: 100px;
+            width: 200px;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 80px;
+            color:white;
+            font-size: 28px;
+            transition: all 1s;
+        }
+        .two:hover {
+            background: teal;
+            /* transform: skew(30deg, 20deg) scale(2); */
+            transform: translate(100px, 200px);
+        }
     </style>
 </head>
 <body>
-    <div class="one">누르시오</div>
+    <div class="one">눌 럿!</div>
     <br><br><br>
-    <div class="two">누르시오</div>
+    <div class="two">눌 럿!</div>
 </body>
 </html>
