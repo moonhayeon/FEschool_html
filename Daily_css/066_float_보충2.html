@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        /* float 특성
+        li {
+            height: 100px;
+            background: pink;
+        }
+        li:nth-child(2) {
+            float: left;
+            width: 100%;
+            background: black;
+        }
+        /* 사라진 형제를 찾기위해 겹쳐진 요소에 clear 속성 부여 
+        clear를 자식 중에 하나만 주면 normal flow 자식요소들이 다 float된 요소를 인식할 수는 없음,
+        clear를 가진 자식만 float된 형제를 인지하고 그 뒤로 후술된 요소들이 따라붙게 됨
+        li:nth-child(3) {
+            clear: left;
+        } */
+        
+        /* float을 해제하는 여러가지 방법들 
+           float 해제: float이 적용된 요소는 노멀플로우(마크업된 대로 쌓이는 것)를 벗어나 붕 떠서 알아볼수없는데, 
+           알아볼수있게 만드는 것 */
+
+        /* 방법 1
+            ul {
+            /* 부모의 영역을 침범할 때 자식을 잘라버림, 
+            이런 부작용 방지를 위해  display:inline-block쓰고 넓이값 따로 주기,
+            이때 부모만 float을 인지하고 형제들은 float을 인지하지 못해서 clear를 주어야함 
+            overflow: hidden;
+        } */
+
+        /* 방법 2 
+        clear fix, ul(부모)에 마지막 자식으로 가상요소 삽입, 
+        현업에서는 ::after가 아닌 .clear_fix라는 클래스를 따로 만들어 필요할때 적용(=유틸리티 클래스)
+        after요소가 원래 인라인이라 블록으로 설정, 안쓰면 클리어픽스 적용안됨 */
+        /* float이 마지막 자식이 아니었으면 after전까지float의 다른 형제요소들은 인식을 못함,
+        이때는 clear fix 안씀 */
+        ul::after {
+            display: block;
+            content: '';
+            clear: left;
+        }
+        li {
+            float: left;
+            width: 300px;
+            height: 100px;
+            background: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
