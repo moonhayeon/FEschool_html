@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>카드 뒷면 다르게</title>
+</head>
+<style>
+    body {
+        padding: 30px;
+    }
+
+    .container {
+        width: 150px;
+        height: 180px;
+        perspective: 800px;
+    }
+
+    .container .item {
+        width: 150px;
+        height: 180px;
+        border: 1px solid #828282;
+        font-size: 35px;
+        backface-visibility: hidden;
+        transition: 1s;
+    }
+
+    .container .item.front {
+        background: aqua;
+        position: absolute;
+        transform: rotateY(0deg);
+    }
+
+    .container:hover .item.front {
+        transform: rotateY(180deg);
+    }
+
+    .container .item.back {
+        background: black;
+        transform: rotateY(-180deg);
+    }
+
+    .container:hover .item.back {
+        transform: rotateY(0deg);
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="item front">
+            <img src="./poker.jpg" alt="poker card" width="100%" height="100%">
+        </div>
+        <div class="item back">
+            <img src="./pokerback.png" alt="poker card" width="100%" height="100%">
+        </div>
+    </div>
+</body>
+
+</html>
